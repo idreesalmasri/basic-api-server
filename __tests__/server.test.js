@@ -59,9 +59,9 @@ describe("testing food routes",()=>{
     })
 })
 describe("testing clothes routes",()=>{
-    it("test creating newFood",async()=>{
+    it("test creating newClothes",async()=>{
         const response=await request.post("/clothes").send({
-            "clothesType":"potato",
+            "clothesType":"test",
             "price":100
         })
         expect(response.status).toEqual(201);
@@ -78,7 +78,7 @@ describe("testing clothes routes",()=>{
     it("test update one record by id",async()=>{
         const id =1;
         const response=await request.put(`/clothes/${id}`).send({
-            "clothesType":"potato",
+            "clothesType":"T-shirt",
             "price":120
         });
         expect(response.status).toEqual(201);
